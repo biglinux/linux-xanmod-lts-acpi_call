@@ -9,7 +9,7 @@ _linuxprefix=linux-xanmod-lts
 _extramodules=$(find /usr/lib/modules -type d -iname 5.15.89*xanmod* | rev | cut -d "/" -f1 | rev)
 pkgname=$_linuxprefix-acpi_call
 _pkgname=acpi_call
-pkgver=2.1.7
+pkgver=1.2.2
 pkgrel=515891
 pkgdesc='A linux kernel module that enables calls to ACPI methods through /proc/acpi/call'
 arch=('x86_64')
@@ -21,7 +21,7 @@ provides=("$_pkgname")
 groups=("$_linuxprefix-extramodules")
 install=$_pkgname.install
 source=("$_pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=(SKIP)
+sha256sums=('8b1902a94395c2fa5a97f81c94868a9cbc46a48e12309ad01626439bde96f1d9')
 
 build() {
   _kernver=$(find /usr/lib/modules -type d -iname 5.15.89*xanmod* | rev | cut -d "/" -f1 | rev)
