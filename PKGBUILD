@@ -21,7 +21,7 @@ provides=("$_pkgname")
 groups=("$_linuxprefix-extramodules")
 install=$_pkgname.install
 source=("$_pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('8b1902a94395c2fa5a97f81c94868a9cbc46a48e12309ad01626439bde96f1d9')
+sha256sums=('SKIP')
 
 build() {
   _kernver=$(find /usr/lib/modules -type d -iname 5.15.89*xanmod* | rev | cut -d "/" -f1 | rev)
