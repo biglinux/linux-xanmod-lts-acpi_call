@@ -23,6 +23,7 @@ source=("$_pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/v$pkgver.tar.gz")
 sha256sums=('8b1902a94395c2fa5a97f81c94868a9cbc46a48e12309ad01626439bde96f1d9')
 
 build() {
+  _kernver="$(cat /usr/src/${_linuxprefix}/version)"
   cd "${_pkgname}-${pkgver}"
   make KVER="${_kernver}"
 }
