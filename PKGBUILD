@@ -11,7 +11,7 @@ _linuxprefix=linux-xanmod-lts
 _module=acpi_call
 pkgname="${_linuxprefix}-${_module}"
 pkgver=1.2.2
-pkgrel=66172
+pkgrel=66181
 pkgdesc='A linux kernel module that enables calls to ACPI methods through /proc/acpi/call'
 arch=('x86_64')
 url="https://github.com/nix-community/acpi_call"
@@ -19,6 +19,7 @@ license=('GPL')
 groups=("${_linuxprefix}-extramodules")
 depends=("${_linuxprefix}")
 makedepends=("${_linuxprefix}-headers" "acpi_call-dkms=$pkgver")
+provides=("${_module}")
 source=("${_module}-$pkgver.tar.gz::${url}/archive/refs/tags/v$pkgver.tar.gz")
 sha256sums=('8b1902a94395c2fa5a97f81c94868a9cbc46a48e12309ad01626439bde96f1d9')
 
